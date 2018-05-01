@@ -1,5 +1,6 @@
-describe Battle do
+describe Battle, type: :feature do
   it 'should load requested string' do
-    expect('/').to have_content?('Testing infrastructure working!')
+    visit '/'
+    expect(page).to have_content('Testing infrastructure working!')
   end
 end
