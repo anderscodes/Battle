@@ -23,8 +23,8 @@
 
     <div class="stats">
       <p class="hit_points">Player one hit points: <%= @player_1_hit_points %></p>
-      <form action="/attack" method='post'>
-        <input type='submit' value='attack'>
+      <form action='/attack-player-2' method='post'>
+        <input type='submit' id='attack-player-2' value='attack'>
       </form>
     </div>
   </div>
@@ -34,8 +34,8 @@
 
   <div class="stats">
     <p class="hit_points">Player two hit points: <%= @player_2_hit_points %></p>
-    <form action="/attack" method='post'>
-      <input type='submit' value='attack'>
+    <form action="/attack-player-1" method='post'>
+      <input type='submit' id='attack-player-1' value='attack'>
     </form>
   </div>
 </div>

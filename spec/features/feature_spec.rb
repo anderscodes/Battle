@@ -21,7 +21,8 @@ feature Battle do
   context 'Player 1 attacks' do
     scenario 'Should reduce hit point of player 2' do
       game_set_up
-      click_button('#player_1_attack')
+      click_button('attack-player-2')
+      save_and_open_page
       expect(page).to have_content("Player two hit points: #{hitpoints - attack_value}")
     end
   end

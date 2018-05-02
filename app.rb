@@ -25,6 +25,16 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  post '/attack-player-1' do
+    session[:player_1_hit_points] -= 3
+    redirect '/play'
+  end
+
+  post '/attack-player-2' do
+    session[:player_2_hit_points] -= 3 
+    redirect '/play'
+  end
+
   # The following only works for running Sinatra directly, not Shotgun.
   run! if app_file == $0
 
